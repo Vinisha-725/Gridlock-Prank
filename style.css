@@ -8,8 +8,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a0000 100%);
-  color: white;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  color: #e0e0e0;
   min-height: 100vh;
   padding: 20px;
   line-height: 1.6;
@@ -24,34 +24,33 @@ body {
 
 /* Typography */
 h1 {
-  color: #ff3333;
+  color: #e74c3c;
   font-size: 2.5rem;
   margin-bottom: 30px;
-  text-shadow: 0 0 20px rgba(255, 51, 51, 0.5);
-  animation: pulse 2s infinite;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
 h2 {
-  color: #ff6666;
+  color: #e74c3c;
   margin: 20px 0;
   font-size: 1.8rem;
+  font-weight: 500;
 }
 
 h3 {
-  color: #ff9999;
+  color: #ecf0f1;
   margin: 15px 0;
   font-size: 1.3rem;
+  font-weight: 400;
 }
 
 /* Form styling */
 #form {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 51, 51, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   margin-bottom: 30px;
 }
 
@@ -60,23 +59,22 @@ input, select, button {
   padding: 12px 16px;
   width: 100%;
   max-width: 300px;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 51, 51, 0.3);
-  background: rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.05);
   color: white;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
 input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 input:focus, select:focus {
   outline: none;
-  border-color: #ff3333;
-  background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 15px rgba(255, 51, 51, 0.3);
+  border-color: #e74c3c;
+  background: rgba(255, 255, 255, 0.08);
 }
 
 select {
@@ -84,33 +82,34 @@ select {
 }
 
 select option {
-  background: #1a0000;
+  background: #1a1a1a;
   color: white;
 }
 
 label {
   display: block;
   margin: 15px 0 5px 0;
-  color: #ff9999;
-  font-weight: 500;
+  color: #bdc3c7;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 button {
-  background: linear-gradient(45deg, #ff3333, #ff6666);
+  background: #e74c3c;
   color: white;
   border: none;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-top: 20px;
-  position: relative;
-  overflow: hidden;
 }
 
 button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(255, 51, 51, 0.4);
+  background: #c0392b;
+  transform: translateY(-1px);
 }
 
 button:active {
@@ -121,32 +120,31 @@ button:active {
 #members {
   margin: 20px 0;
   padding: 15px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 10px;
-  border: 1px solid rgba(255, 51, 51, 0.2);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Loading and result sections */
 #loading, #result {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   padding: 30px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 51, 51, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   max-width: 600px;
   margin: 0 auto;
 }
 
 #loading h2 {
-  animation: pulse 1.5s infinite;
+  animation: pulse 2s infinite;
 }
 
 #result img {
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 20px 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: 3px solid #ff3333;
+  border: 2px solid #e74c3c;
+  max-width: 100%;
+  height: auto;
 }
 
 #result ul {
@@ -154,14 +152,14 @@ button:active {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
   list-style-position: inside;
 }
 
 #result li {
   margin: 10px 0;
-  color: #ffcccc;
+  color: #ecf0f1;
 }
 
 /* Utility classes */
@@ -175,23 +173,8 @@ button:active {
     opacity: 1;
   }
   50% {
-    opacity: 0.7;
+    opacity: 0.6;
   }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 0.5s ease-out;
 }
 
 /* Mobile Responsive */
@@ -220,13 +203,11 @@ button:active {
   
   input, select, button {
     padding: 10px 14px;
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px;
   }
   
   #result img {
-    width: 100%;
     max-width: 200px;
-    height: auto;
   }
   
   #result ul {
