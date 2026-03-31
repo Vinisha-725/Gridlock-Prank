@@ -8,12 +8,13 @@ const memberCount = document.getElementById("memberCount");
 // Generate member inputs
 memberCount.addEventListener("change", () => {
   memberDiv.innerHTML = "";
-  let count = memberCount.value;
+  let totalMembers = parseInt(memberCount.value);
+  let additionalMembers = totalMembers - 1; // Subtract 1 for the lead
 
-  for (let i = 1; i <= count; i++) {
+  for (let i = 1; i <= additionalMembers; i++) {
     memberDiv.innerHTML += `
-      <input type="text" placeholder="Member ${i} Name" required><br>
-      <input type="text" placeholder="Member ${i} Roll No" required><br>
+      <input type="text" placeholder="Member ${i} Name" required>
+      <input type="text" placeholder="Member ${i} Roll No" required>
     `;
   }
 });
