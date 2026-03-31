@@ -6,50 +6,51 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<div class="container">
+  <h1>⚡ Power Rangers Mission Entry ⚡</h1>
 
-<h1>⚡ Power Rangers Mission Entry ⚡</h1>
+  <form id="form">
+    <input type="text" placeholder="Team Name" required>
+    <input type="text" placeholder="Lead Name" required>
+    <input type="text" placeholder="Lead Roll No" required>
 
-<form id="form">
-  <input type="text" placeholder="Team Name" required><br>
-  <input type="text" placeholder="Lead Name" required><br>
-  <input type="text" placeholder="Lead Roll No" required><br>
+    <label>Members:</label>
+    <select id="memberCount">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+    </select>
 
-  <label>Members:</label>
-  <select id="memberCount">
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-  </select>
+    <div id="members"></div>
 
-  <div id="members"></div>
+    <input type="text" placeholder="Current Building" required>
 
-  <input type="text" placeholder="Current Building" required><br>
+    <label>Upload Team Photo:</label>
+    <input type="file" id="photo" accept="image/*" required>
 
-  <label>Upload Team Photo:</label>
-  <input type="file" id="photo" accept="image/*" required><br><br>
+    <button type="submit">Submit ⚡</button>
+  </form>
 
-  <button type="submit">Submit ⚡</button>
-</form>
+  <div id="loading" class="hidden">
+    <h2>⚡ Morphing... Please Wait ⚡</h2>
+    <p>Connecting to Ranger Grid...</p>
+  </div>
 
-<div id="loading" class="hidden">
-  <h2>⚡ Morphing... Please Wait ⚡</h2>
-  <p>Connecting to Ranger Grid...</p>
-</div>
+  <div id="result" class="hidden">
+    <h2>😂 GOT YOU 😂</h2>
+    <img id="displayPic" width="250">
 
-<div id="result" class="hidden">
-  <h2>😂 GOT YOU 😂</h2>
-  <img id="displayPic" width="250"><br>
+    <h3>5 reasons why you shouldn't scan random QR codes:</h3>
+    <ul>
+      <li>1. You don't know where it leads</li>
+      <li>2. Could be phishing</li>
+      <li>3. Could install malware</li>
+      <li>4. Data theft risk</li>
+      <li>5. You might just get pranked like this 😭</li>
+    </ul>
 
-  <h3>5 reasons why you shouldn't scan random QR codes:</h3>
-  <ul>
-    <li>1. You don’t know where it leads</li>
-    <li>2. Could be phishing</li>
-    <li>3. Could install malware</li>
-    <li>4. Data theft risk</li>
-    <li>5. You might just get pranked like this 😭</li>
-  </ul>
-
-  <h2>“Wasted 2 minutes for WHAT?” 💀</h2>
+    <h2>"Wasted 2 minutes for WHAT?" 💀</h2>
+  </div>
 </div>
 
 <script src="script.js"></script>
